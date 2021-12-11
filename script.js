@@ -1,4 +1,12 @@
 "use strict";
+// // стрелочная функция............................
+//  let str = "ptest";
+//  console.log(str.length);
+// console.log(str.toLowerCase);
+// str.toUpperCase;
+//  console.log(str);
+
+
 // КОЛБЭК ФУНКЦИИ  .............................................
 // function first() {
 //     // do something
@@ -118,92 +126,120 @@ function compareNum(a, b) {
 
 // ПЕРЕДАЧА ДАННЫХ ПО ССЫЛКЕ И ПО ЗНАЧЕНИЮ ......................................
 
-let a = 5,
-    b = a;
-    b = b + 5;
-    console.log(a);
-    console.log(b);
+// let a = 5,
+//     b = a;
+//     b = b + 5;
+//     console.log(a);
+//     console.log(b);
 
-    const obj = {
-        a : 5,
-        b : 1
-    };
-    const copy = obj; // передает ссылку
-    copy.a = 10;
-    console.log(copy);
-    console.log(obj);
+//     const obj = {
+//         a : 5,
+//         b : 1
+//     };
+//     const copy = obj; // передает ссылку
+//     copy.a = 10;
+//     console.log(copy);
+//     console.log(obj);
 
-    // { a: 10, b: 1 }
-    // { a: 10, b: 1 }
+//     // { a: 10, b: 1 }
+//     // { a: 10, b: 1 }
 
-    function copy1(mainObj) {
-        let objCopy = {};
+//     function copy1(mainObj) {
+//         let objCopy = {};
 
-        let key;
-        for (key in mainObj) {
-            objCopy[key] = mainObj[key];
-        }
+//         let key;
+//         for (key in mainObj) {
+//             objCopy[key] = mainObj[key];
+//         }
 
-        return objCopy;
-    }
+//         return objCopy;
+//     }
 
-const numbers = {
-        a: 2,
-        b: 5,
-        c: 10,
-        d: 11,
-        e: {
-            x:4,
-            y:5
-        }
-    };
+// const numbers = {
+//         a: 2,
+//         b: 5,
+//         c: 10,
+//         d: 11,
+//         e: {
+//             x:4,
+//             y:5
+//         }
+//     };
 
-const newNumbers = copy1(numbers);
-newNumbers.a = 10;
-newNumbers.e.x = 10;
+// const newNumbers = copy1(numbers);
+// newNumbers.a = 10;
+// newNumbers.e.x = 10;
 
-// console.log(newNumbers);
-// console.log(numbers);
+// // console.log(newNumbers);
+// // console.log(numbers);
 
-const add = {
-    f: 17,
-    j: 20
-};
+// const add = {
+//     f: 17,
+//     j: 20
+// };
 
-console.log(Object.assign(numbers, add));
-const clone = Object.assign({}, add);
-clone.d = 'qwerty';
-// console.log(clone);
+// console.log(Object.assign(numbers, add));
+// const clone = Object.assign({}, add);
+// clone.d = 'qwerty';
+// // console.log(clone);
 
-const oldArr = ["a", "b", "d", "e"];
-const newArr = oldArr.slice();
-newArr[1] = "adasada";
-console.log(newArr);
-console.log(oldArr);
+// const oldArr = ["a", "b", "d", "e"];
+// const newArr = oldArr.slice();
+// newArr[1] = "adasada";
+// console.log(newArr);
+// console.log(oldArr);
 
-const video = ['youtube', 'vimeo', 'rutube'],
-      blogs = ['wordpress', 'livejournal', 'blogger'],
-      internet = [...video, ...blogs, 'vk', 'fb']; // spread ..........
-console.log(internet);
+// const video = ['youtube', 'vimeo', 'rutube'],
+//       blogs = ['wordpress', 'livejournal', 'blogger'],
+//       internet = [...video, ...blogs, 'vk', 'fb']; // spread ..........
+// console.log(internet);
 
-function log(a, b, c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
+// function log(a, b, c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
 
-const num2 = [2, 5, 7];
+// const num2 = [2, 5, 7];
 
-log(...num2);// spread........
+// log(...num2);// spread........
 
-const arrays = ['a', 'b', 'c'];
+// const arrays = ['a', 'b', 'c'];
 
-const newArrays = [...arrays];
-console.log(newArrays);
+// const newArrays = [...arrays];
+// console.log(newArrays);
 
-const q = {
-    one: 1,
-    two: 2
-};
-const newQ = {...q};
-console.log(newQ);
+// const q = {
+//     one: 1,
+//     two: 2
+// };
+// const newQ = {...q};
+// console.log(newQ);
+
+// ОСНОВЫ ООП................................
+
+let str = "awesome";
+// let strObj = new String(str);
+
+console.log(typeof(str));
+console.log(typeof(strObj));
+
+console.dir([1, 2, 3, 4, 5, 6]);
+
+
+ const soldier = {
+     health: 400,
+     armor: 100,
+     special: function () {
+         console.log('hello');
+     }
+ };
+const john = Object.create(soldier);
+
+//  const john = {
+//      health: 100
+
+//  };
+//  Object.setPrototypeOf(john, soldier);
+// john.special();
+console.log(john.health);
