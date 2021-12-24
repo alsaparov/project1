@@ -18,50 +18,21 @@
 // }
 
 
-// to string.....................................
-// 1)
-console.log(typeof(String(null)));
-console.log(typeof(String(4)));
+// let y = 1;
+// let x = y = 2;
+// console.log(x);
 
-// 2)
+// let x = 5;
 
-const num = 5;
+// console.log(++x);
+[ ] + false - null + true
+console.log([ ] + false - null + true);
+console.log([ ] + 1 + 2);
 
-console.log("https//vk.com/catalog/" + num);
-
-const fontSize = 26 + 'px';
-
-// to number.........................................
-
-//1)
-console.log(typeof(Number('4')));
-
-// 2)
-console.log(typeof(+'5'));
-
-//3
-console.log(typeof(parseInt("15px", 10)));
-
-let answer = +prompt('Hello', '');
-
-// to boolean ...................................
-
-// 0, '', null, undefined, NaN;
-// 1)
-let switcher = null;
-
-if (switcher) {
-    console.log('Working...');
-}
-
-let switcher1 = 1;
-
-if (switcher1) {
-    console.log('Working...');
-}
-
-// 2)
-console.log(typeof(Boolean('4')));
-
-console.log(typeof(!'111111'));
-//3)
+console.log( "1"[1] )
+// alert( null || 2 && 3 || 4 );
+// alert(+'Infinity');
+console.log(+'Infinity');
+// Чему равно 2 && 1 && null && 0 && undefined ?
+//  и запинается на лжи
+// или запинается на правде

@@ -93,7 +93,7 @@ const personalMovieDB = {
             }
             // let genres = prompt(`Введите ваши любимы жанры через запятую`).toLowerCase();
 
-        s    // if (genres === '' || genres == null) {
+            // if (genres === '' || genres == null) {
             //         console.log('Вы ввели некорректные данные или не ввели их вовсе');
             //         i--;
             //     } else {
